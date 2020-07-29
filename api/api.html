@@ -79,11 +79,11 @@
       border-top: 1px solid #333;
     }
   </style>
-  <script src="//cdn.ronghub.com/RongIMLib-2.5.6.js"></script>
+  <script src="../RongIMLib-3.0.5-dev-hotfix.js"></script>
   <!-- <script src="//cdn.ronghub.com/RongRTC-3.2.0.js"></script> -->
   <!-- <script src="./RongRTC-3.2.0-bugfix.js"></script> -->
   <!-- <script src="./RongRTC-3.2.1-private-hotfix.js"></script> -->
-  <script src="./RongRTC-3.2.2.js"></script>
+  <script src="//cdn.ronghub.com/RongRTC-3.2.3.js"></script>
   <script src="../im.js"></script>
   <script src="../utils.js"></script>
   <script src="../mock.js"></script>
@@ -226,17 +226,6 @@
           imInstance = instance;
           console.log('连接成功，用户 ID: ' + userId);
           callback();
-        },
-        disconnectd: function (status) {
-          imInstance = null;
-          console.log('连接断开');
-        },
-        error: function () {
-          imInstance = null;
-          console.log('连接异常，状态码: ' + status);
-        },
-          onTokenIncorrect: function () {
-          console.log('Token 不正确，可在融云开发者后台获取 https://developer.rongcloud.cn/');
         }
       };
       initIM(params, callbacks);
